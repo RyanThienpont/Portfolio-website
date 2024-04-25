@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" crossorigin="anonymous">
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/000000/portfolio.png">
+    <title>Ryan Thienpont Portfolio</title>
+</head>
+<body class="bg-gray-100 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto py-4 px-6 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-gray-800">Ryan Thienpont</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="#" class="text-gray-600 hover:text-blue-500">Home</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-500">About</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-500">Skills</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-500">Portfolio</a></li>
+                    <li><a href="#" class="text-gray-600 hover:text-blue-500">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-blue-500 to-purple-600 text-white py-20">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold mb-4">Welcome to My Portfolio</h2>
+            <p id="herotext" class="typing-animation p-4 text-lg"></p>
+        </div>
+    </section>
+    
+
+    <!-- About Section-->
+    <section id="About" class="md:flex justify-center items-center py-16">
+        <div class="w-full md:w-1/3 mx-4">
+            <!-- Image Carousel -->
+            <div class="relative">
+                <!-- Previous Button -->
+                <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-2 opacity-75 hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 flex justify-center items-center" onclick="prevImage()">
+                    <img src="Images/next-svgrepo-com.svg" class="w-1/3 h-auto rotate-180">
+                </button>
+                <!-- Image Slides Container -->
+                <div id="imageCarousel" class="overflow-hidden flex justify-center items-center">
+                    <div class="flex transition-transform duration-300 ease-in-out">
+                        <img src="https://source.unsplash.com/random/800x600" alt="Image 1" class="w-auto h-72 object-cover">
+                        <img src="https://source.unsplash.com/random/800x601" alt="Image 2" class="w-auto h-72 object-cover hidden">
+                        <img src="https://source.unsplash.com/random/800x602" alt="Image 3" class="w-auto h-72 object-cover hidden">
+                    </div>
+                </div>
+                <!-- Next Button -->
+                <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-blue-500 text-white rounded-full p-2 opacity-75 hover:opacity-100 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50 flex justify-center items-center" onclick="nextImage()">
+                    <img src="Images/next-svgrepo-com.svg" class="w-1/3 h-auto">
+                </button>
+            </div>
+            
+        </div>
+        <div class="w-full md:w-1/2 mx-4">
+            <div id="aboutMe" class="p-8 bg-white rounded-lg shadow-md">
+                <h3 class="text-3xl font-semibold mb-4 text-center text-gray-800">About Me</h3>
+                <p id="aboutText" class="text-lg text-gray-700 leading-relaxed">
+                    Hey there! I'm a <span id="age"></span>-year-old .NET Developer passionate about web development and love creating innovative solutions to complex problems. With a strong background in front-end and back-end technologies, I enjoy working on full-stack projects that push the boundaries of what's possible on the web. When I'm not coding, you can find me going out with friends, gaming, or watching football.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills section-->
+    <section id="Skills" class="md:flex justify-center items-center py-16">
+        <!--Soft Skills-->
+        <div class="w-full md:w-1/3 mx-4">
+            <div class="p-8 bg-white rounded-lg shadow-md">
+                <h3 class="text-3xl font-semibold mb-4 text-center text-gray-800">Soft skills</h3>
+                <div>
+                    <ul class="list-disc pl-4">
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-comments text-blue-500 mr-2"></i>
+                            Communication
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-handshake text-blue-500 mr-2"></i>
+                            Collaboration
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-adjust text-blue-500 mr-2"></i>
+                            Adaptability
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-chess-queen text-blue-500 mr-2"></i>
+                            Leadership
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-hands-helping text-blue-500 mr-2"></i>
+                            Empathy
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-lightbulb text-blue-500 mr-2"></i>
+                            Problem Solving
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-book-open text-blue-500 mr-2"></i>
+                            Eager to learn
+                        </li>
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-user-cog text-blue-500 mr-2"></i>
+                            Independent
+                        </li>
+                        <!-- New soft skill -->
+                        <li class="mb-2 flex items-center">
+                            <i class="fas fa-paint-brush text-blue-500 mr-2"></i>
+                            Creativity
+                        </li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+        <!--Hard Skills-->
+        <div class="w-full md:w-1/2 mx-4">
+            <div class="p-8 bg-white rounded-lg shadow-md h-auto">
+                <h3 class="text-3xl font-semibold mb-4 text-center text-gray-800">Hard skills</h3>
+                <div class="md:flex">
+                    <div class="w-1/2">
+                        <ul class="list-disc pl-4">
+                            <li class="mb-2 flex items-center">
+                                <i class="fab fa-html5 text-blue-500 mr-2"></i>
+                                HTML/CSS
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fab fa-js-square text-blue-500 mr-2"></i>
+                                Javascript
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fab fa-java text-blue-500 mr-2"></i>
+                                Java
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-database text-blue-500 mr-2"></i>
+                                SQL
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-code text-blue-500 mr-2"></i>
+                                .NET Framework
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-code text-blue-500 mr-2"></i>
+                                .NET Core
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-code text-blue-500 mr-2"></i>
+                                .NET Identity
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-file-code text-blue-500 mr-2"></i>
+                                Tailwindcss
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-file-code text-blue-500 mr-2"></i>
+                                Bulma
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-1/2">
+                        <ul class="list-disc pl-4">
+                            <li class="mb-2 flex items-center">
+                                <i class="fab fa-raspberry-pi text-blue-500 mr-2"></i>
+                                MVC
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fab fa-vuejs text-blue-500 mr-2"></i>
+                                Vue.js
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-network-wired text-blue-500 mr-2"></i>
+                                RESTful API
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-broadcast-tower text-blue-500 mr-2"></i>
+                                SignalR
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-desktop text-blue-500 mr-2"></i>
+                                WPF
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-mobile-alt text-blue-500 mr-2"></i>
+                                Xamarin Forms
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fab fa-windows text-blue-500 mr-2"></i>
+                                .NET Maui
+                            </li>
+                            <li class="mb-2 flex items-center">
+                                <i class="fas fa-file-code text-blue-500 mr-2"></i>
+                                Bootstrap
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </section>
+
+    <section class="bg-gradient-to-br from-blue-500 to-purple-600 py-20">
+        <div class="container mx-auto text-center flex flex-wrap justify-center">
+            <div class="max-w-xs rounded overflow-hidden shadow-lg mx-4 my-4">
+                <img class="w-full" src="https://source.unsplash.com/random/800x602" alt="Image">
+                <div class="px-6 py-4 bg-white">
+                    <div class="font-bold text-xl mb-2">Jane Doe's Portfolio</div>
+                    <div class="flex items-center">
+                        <a href="https://github.com/janedoe" class="text-gray-600 text-base"> <i class="fa-brands fa-github"></i> View Jane's GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-xs rounded overflow-hidden shadow-lg mx-4 my-4">
+                <img class="w-full" src="https://source.unsplash.com/random/800x602" alt="Image">
+                <div class="px-6 py-4 bg-white">
+                    <div class="font-bold text-xl mb-2">John Smith's Projects</div>
+                    <div class="flex items-center">
+                        <a href="https://github.com/johnsmith" class="text-gray-600 text-base"> <i class="fa-brands fa-github"></i> View John's GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-xs rounded overflow-hidden shadow-lg mx-4 my-4">
+                <img class="w-full" src="https://source.unsplash.com/random/800x602" alt="Image">
+                <div class="px-6 py-4 bg-white">
+                    <div class="font-bold text-xl mb-2">Emily Johnson's Code Hub</div>
+                    <div class="flex items-center">
+                        <a href="https://github.com/emilyj" class="text-gray-600 text-base"> <i class="fa-brands fa-github"></i> View Emily's GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="max-w-xs rounded overflow-hidden shadow-lg mx-4 my-4">
+                <img class="w-full" src="https://source.unsplash.com/random/800x602" alt="Image">
+                <div class="px-6 py-4 bg-white">
+                    <div class="font-bold text-xl mb-2">Alex Thompson's Repository</div>
+                    <div class="flex items-center">
+                        <a href="https://github.com/alexthompson" class="text-gray-600 text-base"> <i class="fa-brands fa-github"></i> View Alex's GitHub</a>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+<!-- Contact Section -->
+<section id="Contact" class="md:flex justify-center items-center py-16">
+    <!-- Contact Form Container -->
+    <div class="w-full md:w-1/2 mx-4">
+        <div class="bg-white p-10 rounded-lg shadow-md">
+
+            <h2 class="text-3xl font-bold text-center mb-8 text-gray-800">Contact me</h2>
+    
+            <form action="#" method="POST">
+    
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-bold mb-2">Name *</label>
+                    <input type="text" id="name" name="name" placeholder="Your Name"
+                           class="w-full px-3 py-2 border-b-2 border-gray-400 focus:outline-none focus:border-purple-500 transition duration-500 text-black">
+                </div>
+
+                <div class="mb-4">
+                    <label for="phonenumber" class="block text-gray-700 font-bold mb-2">Phone Number</label>
+                    <input type="text" id="phonenumber" name="phonenumber" placeholder="Your Phone number"
+                           class="w-full px-3 py-2 border-b-2 border-gray-400 focus:outline-none focus:border-purple-500 transition duration-500 text-black">
+                </div>
+                <!-- Subject Input -->
+                <div class="mb-4">
+                    <label for="subject" class="block text-gray-700 font-bold mb-2">Subject *</label>
+                    <input type="text" id="subject" name="subject" placeholder="Your Subject"
+                           class="w-full px-3 py-2 border-b-2 border-gray-400 focus:outline-none focus:border-purple-500 transition duration-500 text-black">
+                </div>
+    
+                <!-- Message Input -->
+                <div class="mb-4">
+                    <label for="message" class="block text-gray-700 font-bold mb-2">Message *</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Your Message" class="w-full px-3 py-2 border-b-2 border-gray-400 focus:outline-none focus:border-purple-500 transition duration-500 text-black"></textarea>
+                </div>
+    
+                <!-- Submit Button -->
+                <div class="mb-6 text-center">
+                    <button type="submit" class="bg-gradient-to-r from-purple-600 to-indigo-600 text-white px-4 py-2 rounded-full hover:from-purple-700 hover:to-indigo-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50 transition duration-500">
+                        Submit
+                    </button>
+                </div>
+    
+            </form>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-4">
+        <div class="container mx-auto text-center">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>
